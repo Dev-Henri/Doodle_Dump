@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connected - Doodle Dump Poster</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 48px auto; padding: 0 16px; line-height: 1.6; color: #1a1a1a; }
+  code { background: #f2f2f2; padding: 2px 6px; border-radius: 4px; word-break: break-all; }
+</style>
+</head>
+<body>
+  <h1 id="title">Connecting...</h1>
+  <p id="msg"></p>
+  <p><a href="index.html">Back to home</a></p>
+
+  <script>
+    var params = new URLSearchParams(window.location.search);
+    var code = params.get("code");
+    var error = params.get("error");
+    var title = document.getElementById("title");
+    var msg = document.getElementById("msg");
+
+    if (code) {
+      title.textContent = "TikTok account connected";
+      msg.innerHTML = "Authorization received. Your authorization code is: <br><br><code>" +
+        code.replace(/[<>&]/g, "") + "</code>";
+    } else if (error) {
+      title.textContent = "Authorization was not completed";
+      msg.textContent = "TikTok returned: " + error.replace(/[<>&]/g, "");
+    } else {
+      title.textContent = "Nothing to show";
+      msg.textContent = "This page receives the result of the TikTok login.";
+    }
+  </script>
+</body>
+</html>

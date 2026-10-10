@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doodle Dump Poster</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 48px auto; padding: 0 16px; line-height: 1.6; color: #1a1a1a; }
+  h1 { margin-bottom: 4px; }
+  .btn { display: inline-block; padding: 12px 20px; background: #111; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; }
+  footer { margin-top: 48px; font-size: 14px; color: #666; }
+  footer a { color: #666; }
+</style>
+</head>
+<body>
+  <h1>Doodle Dump Poster</h1>
+  <p><em>Schedule your own drawing videos on your own TikTok account.</em></p>
+
+  <p>
+    Doodle Dump Poster is a small tool that lets a creator publish their own
+    original drawing videos to their own TikTok account on a schedule. The
+    creator connects their TikTok account once through TikTok Login. After
+    that, the app uploads pre-selected videos with a caption and hashtags
+    defined by the creator.
+  </p>
+
+  <h2>How it works</h2>
+  <ol>
+    <li>The creator clicks "Login with TikTok" and approves access on TikTok's own authorization screen.</li>
+    <li>The app receives an authorization code and exchanges it for an access token.</li>
+    <li>The app publishes the creator's prepared videos to the creator's own profile using the Content Posting API.</li>
+  </ol>
+
+  <p>
+    <a class="btn" href="https://www.tiktok.com/v2/auth/authorize/?client_key=awhc46xegv8noffi&scope=user.info.basic,video.publish&response_type=code&redirect_uri=https%3A%2F%2Fdev-henri.github.io%2Fdoodle-dump%2Fcallback.html&state=doodledump">Login with TikTok</a>
+  </p>
+
+  <footer>
+    <a href="terms.html">Terms of Service</a> ·
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</body>
+</html>
